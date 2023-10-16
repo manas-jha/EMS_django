@@ -2,12 +2,9 @@ add_emp ->
     remove required use default 0
     edit css of form
 
-    department dropdown choose in form
-    role dropdown choose in form
+    role and department dropdown choose in form
 
     emp added successfully and redirect to index.html
 
-    make all in center (UI)
+    
 
-
-clicked function in all display nav bar in all using django

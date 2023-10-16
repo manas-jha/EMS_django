@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee App</title>
-    <style>
-        *{
-            box-sizing: border-box;
-            padding: 0;
-            margin: 0;
-        }
-        .nav{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .nav a{
-            padding: 2px 5px;
-            text-decoration: none;
-            background-color:aqua;
-            color: black;
-        }
+{% extends "master.html" %}
 
-    </style>
-</head>
-<body>
-    <h1>Employee Management System</h1> <hr>
-    <div class="nav">
-        <a href="/all_emp">View All Employee</a>
-        <a href="/add_emp">Add An Employee</a>
-        <a href="/remove_emp">Remove An Employee</a>
-        <a href="/filter_emp">Filter Employee Details</a>
-    </div>
-</body>
-</html>
+{% block title %}Employee Manager{% endblock %}
+
+{% block style %}
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    .container h1 {
+        font-size: 4rem;
+    }
+    .container h3 {
+        font-size: 2rem;
+    }
+</style>
+{%endblock%}
+
+{% block body %}
+<div class="container">
+    <h1>Welcome..</h1>
+    <h3>To</h3>
+    <h1>Office Manager</h1>
+</div>
+{% endblock %}

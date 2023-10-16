@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        html{
+            background-color: rgb(249, 250, 252);
+        }
+        .nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .nav a{
+            padding: 2px 5px;
+            text-decoration: none;
+            background-color:aqua;
+            color: black;
+        }
+        .nav-head {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 1%;
+        }
+        .content-box {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+        {% block style %}{% endblock %}
+
+</head>
+<body>
+    <div class="nav-head">
+        <h1>Employee Management System</h1> <hr>
+        <div class="nav">
+            <a href="/all_emp">View All Employee</a>
+            <a href="/add_emp">Add An Employee</a>
+            <a href="/remove_emp">Remove An Employee</a>
+            <a href="/filter_emp">Filter Employee Details</a>
+        </div>
+    </div>
+    <div class="content-box">
+
+        {% block body %}
+        {% endblock %}
+
+        {% block script %}
+        {% endblock %}
+    </div>
+</body>
+</html>

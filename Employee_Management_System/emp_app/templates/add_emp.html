@@ -1,42 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employee</title>
-</head>
+{% extends "master.html" %}
 
-<body>
-    <div>
-        <h1>Add an Employee!</h1>
-    </div>
-    <hr>
-    <div>
-        <form action="/add_emp" method="post">
-            {% csrf_token %}
-            <label for="first_name">First Name</label> <br>
-            <input type="text" name="first_name" id="first_name" value="{{first_name}}"> <br>
+{% block title %}Add Employee{% endblock %}
 
-            <label for="last_name">Last Name</label> <br>
-            <input type="text" name="last_name" id="last_name" value="{{last_name}}"> <br>
+{% block style %}
+<style>
+    .heading{
+        padding: 1rem;
+    }
+    .emp_form  {
+        padding: 1rem 2rem;
+    }
+</style>
+{% endblock %}
 
-            <label for="phone">Phone number</label> <br>
-            <input type="number" name="phone" id="phone" value="{{phone}}" required> <br>
-
-            <label for="salary">Salary</label> <br>
-            <input type="number" name="salary" id="salary" value="{{salary}}" required> <br>
-
-            <label for="department">Department</label> <br>
-            <input type="number" name="department" id="department" value="{{department}}" required> <br>
-
-            <label for="role">Role</label> <br>
-            <input type="number" name="role" id="role" value="{{role}}" required><br>
-
-            <label for="bonus">Bonus</label> <br>
-            <input type="number" name="bonus" id="bonus" value="{{bonus}}" required> <br>
-
-            <button type="submit">Add Employee</button>
-        </form>
-    </div>
-</body>
-</html>
+{% block body %}
+<div class="heading">
+    <h1>Add an Employee!</h1> <hr>
+</div>
+<hr>
+<div class="emp_form">
+    <form action="/add_emp" method="post">
+        {% csrf_token %}
+        <label for="first_name">First Name</label> <br>
+        <input type="text" name="first_name" id="first_name" value="{{first_name}}"> <br>
+        <label for="last_name">Last Name</label> <br>
+        <input type="text" name="last_name" id="last_name" value="{{last_name}}"> <br>
+        <label for="phone">Phone number</label> <br>
+        <input type="number" name="phone" id="phone" value="{{phone}}" required> <br>
+        <label for="salary">Salary</label> <br>
+        <input type="number" name="salary" id="salary" value="{{salary}}" required> <br>
+        <label for="department">Department</label> <br>
+        <input type="number" name="department" id="department" value="{{department}}" required> <br>
+        <label for="role">Role</label> <br>
+        <input type="number" name="role" id="role" value="{{role}}" required><br>
+        <label for="bonus">Bonus</label> <br>
+        <input type="number" name="bonus" id="bonus" value="{{bonus}}" required> <br>
+        <button type="submit">Add Employee</button>
+    </form>
+</div>
+{% endblock %}
