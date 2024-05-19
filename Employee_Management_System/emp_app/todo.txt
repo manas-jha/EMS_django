@@ -1,10 +1,6 @@
-add_emp -> 
-    remove required use default 0
-    edit css of form
 
-    role and department dropdown choose in form
 
-    emp added successfully and redirect to index.html
+
 
     
 

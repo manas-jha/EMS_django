@@ -7,10 +7,13 @@ class Department(models.Model):
     location = models.CharField(max_length=100)
     def __str__(self):
         return self.name
+    
 class Role(models.Model):
     name = models.CharField(max_length=100, null=False)
     def __str__(self):
         return self.name
+
+
 
 class Employee(models.Model):
     first_name = models.CharField(max_length=100, null=False)
@@ -23,3 +26,4 @@ class Employee(models.Model):
     hire_date = models.DateField()
     def __str__(self):
         return self.first_name
+    
